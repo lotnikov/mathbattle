@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Math Battles</title>
+    <link rel="stylesheet" href="{% static 'app/styles.css' %}">
+</head>
+<body>
+<h1>Math Battles</h1>
+{% for item in items %}
+<div>
+    <h3>{{ item.Name }}</h3>
+    <img src="{{ item.Logo.url }}" alt="{{ item.Name }}">
+    <div>{{ item.DateStart|date:"Y-m-d" }}</div>
+</div>
+{% endfor %}
+</body>
+</html>
